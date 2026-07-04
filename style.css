@@ -1445,52 +1445,52 @@ body.theme-style-3 {
 /* Switcher widget styling */
 .style-switcher {
   position: fixed;
-  bottom: 24px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(19, 18, 21, 0.95);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(237, 233, 223, 0.15);
-  border-radius: 30px;
-  padding: 8px 24px;
+  background: rgba(15, 14, 17, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(237, 233, 223, 0.1);
+  border-radius: 20px;
+  padding: 4px 12px;
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 12px;
   z-index: 9999;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
 }
 .switcher-title {
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--steel);
   border-right: 1px solid var(--line);
-  padding-right: 20px;
+  padding-right: 12px;
 }
 .switcher-options {
   display: flex;
-  gap: 12px;
+  gap: 6px;
 }
 .switcher-btn {
   background: none;
   border: none;
   color: var(--chalk-dim);
   font-family: var(--body);
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   font-weight: 500;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  border-radius: 20px;
-  transition: all 0.3s ease;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
 }
 .switcher-btn:hover {
   color: var(--chalk);
-  background: rgba(237, 233, 223, 0.05);
+  background: rgba(237, 233, 223, 0.04);
 }
 .switcher-btn.active {
   color: var(--ink);
@@ -1498,11 +1498,11 @@ body.theme-style-3 {
   font-weight: 600;
 }
 .btn-indicator {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: rgba(237, 233, 223, 0.3);
-  transition: background 0.3s ease;
+  transition: background 0.2s ease;
 }
 .switcher-btn.active .btn-indicator {
   background: var(--ink);
@@ -1512,15 +1512,15 @@ body.theme-style-3 {
   .style-switcher {
     width: calc(100% - 32px);
     flex-direction: column;
-    padding: 16px;
-    gap: 12px;
+    padding: 10px;
+    gap: 8px;
     border-radius: 12px;
-    bottom: 16px;
+    bottom: 12px;
   }
   .switcher-title {
     border-right: none;
     padding-right: 0;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
     border-bottom: 1px solid var(--line);
     width: 100%;
     text-align: center;
