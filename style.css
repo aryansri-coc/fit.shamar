@@ -1362,6 +1362,50 @@ body.theme-style-1 .hero-inner-style-1 {
 .hero-title-style-1 span {
   color: var(--ember);
 }
+.editorial-patches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 4px 0 12px;
+}
+.patch-tag {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.patch-tag.solid {
+  background: var(--ember);
+  color: var(--ink);
+  font-weight: 700;
+}
+.patch-tag.dashed {
+  border: 1px dashed var(--line);
+  color: var(--steel);
+}
+.patch-tag.outline {
+  border: 1px solid var(--line);
+  color: var(--chalk-dim);
+}
+.patch-tag.dot {
+  border: 1px solid var(--line);
+  color: var(--chalk-dim);
+}
+.tag-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #39ff14;
+  display: inline-block;
+  box-shadow: 0 0 6px #39ff14;
+}
 .editorial-shop-btn {
   display: inline-flex;
   align-items: center;
