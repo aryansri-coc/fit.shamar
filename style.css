@@ -634,7 +634,7 @@ button{ font-family:inherit; }
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center 15%;
+  object-position:82% 0%;
   display:block;
   position:relative;
   z-index:2;
@@ -1388,6 +1388,11 @@ body.theme-style-1 .hero-inner-style-1 {
 
 /* Responsive layout overrides */
 @media (max-width: 960px) {
+  .hero {
+    min-height: auto !important;
+    overflow: visible !important;
+    padding: 120px 24px 60px !important;
+  }
   .hero-inner-style-1 {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1738,6 +1743,13 @@ body.theme-style-4 .hero-inner-style-4 {
    MOBILE RESPONSIVENESS PATCH (max-width: 600px)
    ============================================ */
 @media (max-width: 600px) {
+  /* General Hero Mobile Height & Scroll fixes */
+  .hero {
+    min-height: auto !important;
+    overflow: visible !important;
+    padding: 100px 16px 40px !important;
+  }
+
   /* Global spacing & font adjustments */
   .section-inner {
     padding: 0 16px;
