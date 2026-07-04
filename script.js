@@ -133,3 +133,17 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// ============================================
+// Interactive Hero Cursor Glow
+// ============================================
+const heroEl = document.querySelector('.hero');
+if (heroEl) {
+  heroEl.addEventListener('mousemove', (e) => {
+    const rect = heroEl.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    heroEl.style.setProperty('--mouse-x', `${x}px`);
+    heroEl.style.setProperty('--mouse-y', `${y}px`);
+  });
+}
