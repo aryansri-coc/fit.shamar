@@ -1404,6 +1404,42 @@ body.theme-style-1 .hero-inner-style-1 {
   display: inline-block;
   box-shadow: 0 0 6px #39ff14;
 }
+.editorial-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 16px 0 24px;
+}
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.feature-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--ember);
+  color: var(--ember);
+  background: rgba(212, 163, 144, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(212, 163, 144, 0.1);
+  transition: transform 0.3s ease, background 0.3s ease;
+  flex-shrink: 0;
+}
+.feature-item:hover .feature-icon {
+  transform: scale(1.1);
+  background: rgba(212, 163, 144, 0.1);
+}
+.feature-text {
+  font-family: var(--body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--chalk);
+  letter-spacing: 0.01em;
+}
 .editorial-shop-btn {
   display: inline-flex;
   align-items: center;
@@ -1909,6 +1945,9 @@ body.theme-style-4 .hero-inner-style-4 {
   }
   .editorial-patches {
     justify-content: center;
+  }
+  .editorial-features {
+    align-items: center;
   }
 
   /* Style 2 Mobile Tweaks */
