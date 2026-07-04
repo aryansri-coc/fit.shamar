@@ -1731,6 +1731,118 @@ body.theme-style-4 .hero-inner-style-4 {
   }
 }
 
+/* ============================================
+   MOBILE RESPONSIVENESS PATCH (max-width: 600px)
+   ============================================ */
+@media (max-width: 600px) {
+  /* Global spacing & font adjustments */
+  .section-inner {
+    padding: 0 16px;
+  }
+  
+  /* Style 1 Mobile Tweaks */
+  .hero-editorial-left {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+  }
+  .editorial-scroll-indicator {
+    display: none !important; /* Hide line and numbers on phone */
+  }
+  .hero-editorial-center {
+    height: 260px !important;
+  }
+  .hero-editorial-right {
+    padding: 0 12px;
+  }
+  .editorial-quote-text {
+    text-align: center !important;
+    font-size: 0.9rem !important;
+  }
+
+  /* Style 2 Mobile Tweaks */
+  .hero-inner-style-2 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+  .hero-inner-style-2 .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-inner-style-2 .hero-actions {
+    justify-content: center;
+    gap: 12px;
+  }
+  .hero-inner-style-2 .hero-sub {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero-inner-style-2 .hero-img-frame {
+    max-width: 290px;
+  }
+
+  /* Style 3 Mobile Tweaks */
+  .hero-stats-left, 
+  .hero-stats-right {
+    flex-wrap: wrap;
+    gap: 12px !important;
+  }
+  .stat-card-ref {
+    min-width: 90px !important;
+    padding: 10px 12px !important;
+  }
+  .stat-value-ref {
+    font-size: 1.3rem !important;
+  }
+  .hero-athlete-ref {
+    height: 260px !important;
+  }
+  
+  /* Style 4 Mobile Tweaks */
+  .hero-light-card {
+    padding: 20px !important;
+    gap: 24px !important;
+    border-radius: 16px !important;
+  }
+  .hero-light-title-wrapper {
+    gap: 12px;
+  }
+  .title-decor-line {
+    width: 3px;
+  }
+  .hero-title-style-4 {
+    font-size: 2rem !important;
+  }
+  .hero-sub-style-4 {
+    font-size: 0.92rem !important;
+  }
+  .hero-light-img-frame {
+    max-width: 220px !important;
+  }
+  .floating-circle-badge {
+    width: 70px !important;
+    height: 70px !important;
+    bottom: -10px !important;
+    right: -10px !important;
+  }
+  .floating-circle-badge svg text {
+    font-size: 8.5px !important;
+  }
+
+  /* Switcher card on phone spacing */
+  .style-switcher {
+    bottom: 8px !important;
+    padding: 8px !important;
+  }
+  .switcher-btn {
+    font-size: 0.65rem !important;
+    padding: 4px 8px !important;
+  }
+}
+
 /* Focus visibility for accessibility */
 a:focus-visible,
 button:focus-visible,
