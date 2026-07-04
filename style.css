@@ -916,6 +916,253 @@ button{ font-family:inherit; }
 }
 
 /* ============================================
+   SOCIALS BANNER & QR PAMPHLET (inspired by ref)
+   ============================================ */
+.socials-banner {
+  padding: 120px 0;
+  background: var(--panel);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.socials-grid-ref {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* Left Card: Promo Details */
+.socials-promo-card {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Mock Instagram Profile */
+.insta-mock-profile {
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+.insta-mock-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.insta-mock-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+.insta-mock-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+}
+.insta-mock-info {
+  display: flex;
+  flex-direction: column;
+}
+.insta-mock-username {
+  font-family: var(--body);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--chalk);
+}
+.insta-mock-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--chalk-dim);
+  margin: 6px 0;
+}
+.insta-mock-stats strong {
+  color: var(--chalk);
+}
+.insta-mock-fullname {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--steel);
+}
+.insta-mock-bio {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--chalk-dim);
+}
+.insta-mock-bio p {
+  margin: 4px 0;
+}
+.insta-mock-link {
+  color: var(--brass) !important;
+  font-weight: 500;
+  font-family: var(--mono);
+}
+
+/* Content Perks */
+.socials-promo-content h3 {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin: 0 0 24px;
+}
+.socials-promo-content h3 span {
+  color: var(--ember);
+}
+.socials-actions-list {
+  display: flex;
+  gap: 28px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+  margin-bottom: 32px;
+}
+.action-item-ref {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+.socials-perks-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.socials-perks-bullets li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.bullet-icon {
+  font-size: 1.3rem;
+  background: rgba(237, 233, 223, 0.04);
+  border: 1px solid var(--line);
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.socials-perks-bullets strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--chalk);
+  margin-bottom: 2px;
+}
+.socials-perks-bullets span {
+  font-size: 0.85rem;
+  color: var(--chalk-dim);
+}
+
+/* Right Card: QR Showcase */
+.socials-qr-card {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.qr-wrapper-ref {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.qr-box-ref {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 240px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transition: border-color 0.3s ease;
+}
+.qr-box-ref:hover {
+  border-color: var(--ember);
+}
+.qr-code-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.qr-handle-ref {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  color: var(--ember);
+}
+
+/* Coach image next to QR code */
+.qr-coach-cutout {
+  flex: 1;
+  position: relative;
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+}
+.qr-coach-cutout img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.5)) grayscale(15%);
+  border-radius: 4px;
+}
+
+/* steps & links */
+.qr-info-content h4 {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--brass);
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+.qr-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.qr-steps-list li {
+  font-size: 0.95rem;
+  color: var(--chalk-dim);
+}
+.social-btn-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Responsive banner */
+@media (max-width: 960px) {
+  .socials-grid-ref {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .qr-wrapper-ref {
+    justify-content: center;
+  }
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 .footer{
