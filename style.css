@@ -181,8 +181,58 @@ button{ font-family:inherit; }
   bottom:-30%; left:50%;
   transform:translateX(-50%);
   width:900px; height:500px;
-  background:radial-gradient(circle, rgba(217,80,46,0.16), transparent 70%);
-  filter:blur(20px);
+  background:radial-gradient(circle, var(--ember), transparent 70%);
+  opacity: 0.16;
+  filter:blur(60px);
+  pointer-events: none;
+}
+.hero-watermark {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--display);
+  font-size: clamp(8rem, 21vw, 19rem);
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(212, 163, 144, 0.04);
+  text-stroke: 1px rgba(212, 163, 144, 0.04);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 1;
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
+  opacity: 0.9;
+}
+.hero-corner-mark {
+  position: absolute;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--steel);
+  opacity: 0.35;
+  letter-spacing: 0.15em;
+  pointer-events: none;
+  z-index: 5;
+}
+.hero-corner-mark.top-left {
+  top: 110px;
+  left: 48px;
+}
+.hero-corner-mark.top-right {
+  top: 110px;
+  right: 48px;
+}
+@media (max-width: 960px) {
+  .hero-watermark {
+    font-size: clamp(5rem, 16vw, 10rem);
+    top: 35%;
+    opacity: 0.6;
+  }
+  .hero-corner-mark {
+    display: none;
+  }
 }
 .hero-inner-ref {
   position: relative;
