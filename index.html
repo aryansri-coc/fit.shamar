@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="theme-style-1">
 
   <!-- NAV -->
   <header class="nav" id="nav">
@@ -44,7 +44,55 @@
   <section class="hero" id="top">
     <div class="hero-grid" aria-hidden="true"></div>
     <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-inner-ref">
+    <!-- STYLE 1: CLASSIC SHAMAR -->
+    <div class="hero-inner-style-1 hero-style-option">
+      <div class="hero-style-content-wrapper">
+        <p class="eyebrow reveal">Personal Training &amp; Online Coaching</p>
+        <h1 class="hero-title-style-1 reveal">
+          TRAIN LIKE<br><span>YOU MEAN IT</span>
+        </h1>
+        <p class="hero-sub-style-1 reveal">
+          Coached by Shamar — strength, conditioning and nutrition programs built
+          around one goal: real, measurable change. No guesswork, no shortcuts.
+        </p>
+        <div class="hero-actions-style-1 reveal">
+          <a href="#plans" class="btn btn-primary">View Membership Plans</a>
+          <a href="#contact" class="btn btn-ghost">Book a Free Consult</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- STYLE 2: ABSTRACT CYBER -->
+    <div class="hero-inner-style-2 hero-style-option">
+      <div class="hero-content">
+        <p class="eyebrow reveal">Personal Training &amp; Online Coaching</p>
+        <h1 class="hero-title">
+          <span class="reveal">TRAIN LIKE</span>
+          <span class="reveal reveal-d1">YOU MEAN IT</span>
+        </h1>
+        <p class="hero-sub reveal reveal-d2">
+          Coached by Shamar — strength, conditioning and nutrition programs built
+          around one goal: real, measurable change. No guesswork, no shortcuts.
+        </p>
+        <div class="hero-actions reveal reveal-d3">
+          <a href="#plans" class="btn btn-primary">View Membership Plans</a>
+          <a href="#contact" class="btn btn-ghost">Book a Free Consult</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-d2">
+        <div class="hero-img-frame">
+          <img src="hero_abstract.png" alt="Abstract energy strength flow" class="hero-img">
+          <div class="hero-img-overlay"></div>
+          <div class="hero-badge">
+            <span class="badge-num">100%</span>
+            <span class="badge-text">Dedicated</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STYLE 3: ELITE REFERENCE -->
+    <div class="hero-inner-ref hero-style-option">
       <!-- Top Header -->
       <div class="hero-header-ref">
         <p class="eyebrow reveal">Personal Training &amp; Online Coaching</p>
@@ -511,6 +559,25 @@
       <a href="https://www.instagram.com/fit.shamar" target="_blank" rel="noopener">Instagram</a>
     </div>
   </footer>
+
+  <!-- STYLE SWITCHER -->
+  <div class="style-switcher" id="styleSwitcher">
+    <div class="switcher-title">Select Client Concept</div>
+    <div class="switcher-options">
+      <button class="switcher-btn active" data-style="1">
+        <span class="btn-indicator"></span>
+        <span class="btn-text">1. Classic Strength</span>
+      </button>
+      <button class="switcher-btn" data-style="2">
+        <span class="btn-indicator"></span>
+        <span class="btn-text">2. Abstract Cyber</span>
+      </button>
+      <button class="switcher-btn" data-style="3">
+        <span class="btn-indicator"></span>
+        <span class="btn-text">3. Elite Reference</span>
+      </button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

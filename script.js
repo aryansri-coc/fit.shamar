@@ -86,3 +86,50 @@ contactForm.addEventListener('submit', (e) => {
   formNote.textContent = "Thanks — that's saved. Connect this form to your email or booking tool to receive submissions.";
   contactForm.reset();
 });
+
+// ============================================
+// Style Switcher (Concept Selector)
+// ============================================
+const switcherBtns = document.querySelectorAll('.switcher-btn');
+
+switcherBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // 1. Remove active class from buttons
+    switcherBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // 2. Update body class
+    const styleId = btn.dataset.style;
+    document.body.className = document.body.className.replace(/\btheme-style-\d+\b/g, '').trim();
+    document.body.classList.add(`theme-style-${styleId}`);
+
+    // 3. Auto-reveal elements inside the active hero style instantly
+    const activeHero = document.querySelector(`.hero-inner-style-${styleId}, .hero-inner-ref`);
+    if (activeHero) {
+      activeHero.querySelectorAll('.reveal').forEach(el => {
+        el.classList.add('is-visible');
+      });
+    }
+
+    // 4. Re-run counter animations if style 3 (Reference Style) is active
+    if (styleId === '3') {
+      const activeCounters = activeHero.querySelectorAll('.counter-num');
+      activeCounters.forEach(el => {
+        // Reset text
+        el.textContent = '0';
+        // Trigger animation
+        animateCounter(el);
+      });
+    }
+  });
+});
+
+// Auto-reveal elements of active theme on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const activeHero = document.querySelector('.hero-inner-style-1');
+  if (activeHero) {
+    activeHero.querySelectorAll('.reveal').forEach(el => {
+      el.classList.add('is-visible');
+    });
+  }
+});
