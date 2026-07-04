@@ -1324,17 +1324,15 @@ body.theme-style-1 .hero-inner-style-1 {
 
 /* Left side indicator & text */
 .hero-editorial-left {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
+  display: block;
   text-align: left;
 }
 .editorial-scroll-indicator {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding-top: 8px;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 24px;
 }
 .scroll-num {
   font-family: var(--mono);
@@ -1894,9 +1892,6 @@ body.theme-style-4 .hero-inner-style-4 {
   
   /* Style 1 Mobile Tweaks */
   .hero-editorial-left {
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
     text-align: center;
   }
   .editorial-scroll-indicator {
@@ -1911,6 +1906,9 @@ body.theme-style-4 .hero-inner-style-4 {
   .editorial-quote-text {
     text-align: center !important;
     font-size: 0.9rem !important;
+  }
+  .editorial-patches {
+    justify-content: center;
   }
 
   /* Style 2 Mobile Tweaks */
