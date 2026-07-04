@@ -1531,6 +1531,206 @@ body.theme-style-3 {
   }
 }
 
+/* Theme 4 Light Minimalist Color Accent Overrides */
+body.theme-style-4 {
+  --ink:        #f9fafb; /* Off-white background */
+  --ink-2:      #ffffff;
+  --panel:      #f3f4f6; /* Light gray borders */
+  --panel-2:    #ffffff;
+  --chalk:      #111827; /* Dark charcoal text */
+  --chalk-dim:  #4b5563; /* Muted gray text */
+  --steel:      #9ca3af;
+  --ember:      #ff5f1f; /* Vibrant Coral Orange */
+  --ember-2:    #ff7c47;
+  --brass:      #ea580c;
+  --line:       rgba(0, 0, 0, 0.08);
+  --line-soft:  rgba(0, 0, 0, 0.04);
+  --glow-1:     rgba(255, 95, 31, 0.05);
+  --glow-2:     rgba(234, 88, 12, 0.03);
+}
+
+/* Style 4 - Light Minimalist Hero Option */
+body.theme-style-4 .hero-inner-style-4 {
+  display: flex !important;
+}
+.hero-inner-style-4 {
+  position: relative;
+  max-width: var(--container);
+  margin: 0 auto;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* Rounded white container card */
+.hero-light-card {
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 56px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.05), 0 0 50px rgba(255,95,31,0.02);
+}
+
+/* Content Left */
+.hero-light-content {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  text-align: left;
+}
+.hero-light-title-wrapper {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+.title-decor-line {
+  width: 5px;
+  background: var(--ember);
+  border-radius: 4px;
+  align-self: stretch;
+}
+.hero-title-style-4 {
+  font-family: var(--body);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.1;
+  text-transform: none;
+  margin: 0;
+  color: var(--chalk);
+  letter-spacing: -0.02em;
+}
+.hero-title-style-4 span {
+  color: var(--ember);
+}
+.hero-sub-style-4 {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--chalk-dim);
+  max-width: 540px;
+  margin: 0;
+}
+
+/* Pill Orange Button */
+.btn-pill-orange {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--ember);
+  color: #ffffff;
+  padding: 12px 14px 12px 28px;
+  border-radius: 35px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(255, 95, 31, 0.2);
+  width: fit-content;
+}
+.btn-pill-orange:hover {
+  background: var(--brass);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 25px rgba(234, 88, 12, 0.3);
+}
+.arrow-circle {
+  width: 36px;
+  height: 36px;
+  background: #ffffff;
+  color: var(--ember);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.btn-pill-orange:hover .arrow-circle {
+  transform: translateX(4px);
+  color: var(--brass);
+}
+
+/* Image Visual Right */
+.hero-light-visual {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-light-img-frame {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: visible; /* To allow rotating badge to pop out slightly */
+}
+.hero-light-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+/* Floating circular badge rotating */
+.floating-circle-badge {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: #ffffff;
+  color: var(--chalk);
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  animation: rotateText 20s linear infinite;
+  z-index: 10;
+}
+.floating-circle-badge svg {
+  width: 100%;
+  height: 100%;
+}
+.badge-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ember);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotateText {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 960px) {
+  .hero-light-card {
+    grid-template-columns: 1fr;
+    padding: 32px;
+    gap: 40px;
+  }
+  .hero-light-visual {
+    order: -1;
+  }
+  .hero-light-img-frame {
+    max-width: 280px;
+  }
+}
+
 /* Focus visibility for accessibility */
 a:focus-visible,
 button:focus-visible,
