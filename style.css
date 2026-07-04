@@ -1145,6 +1145,7 @@ button{ font-family:inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--ember);
 }
 .socials-perks-bullets strong {
   display: block;
